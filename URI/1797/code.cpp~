@@ -1,0 +1,167 @@
+#include <bits/stdc++.h>
+#include <algorithm>
+ 
+using namespace std;
+ 
+#define ENDLINE printf("\n");
+#define HEY printf("HEY\n");
+#define HEYA printf("HEY_A\n");
+#define HEYB printf("HEY_B\n");
+#define HEY2 printf("   HEY\n");
+#define HEY3 printf("       HEY\n");
+#define END ("\n")
+#define for0(i,n) for( __typeof(n)i = 0 ; i < n ; i++)
+#define for1(i,n) for( __typeof(n)i = 1 ; i <= n ; i++)
+#define forstl(i,n) for(__typeof(n.begin())i = n.begin();i!=n.end();i++)
+#define forab(i,a,b)for(__typeof(b)i = a ; i <= (b) ; i++)
+ 
+#define pm(mat,n,m) \
+    for0(i,n)       \
+    {               \
+        for0(j,m)   \
+        {           \
+            cout << "[" << mat[i][j] << "]";    \
+        }ENDLINE    \
+    }   \
+ 
+#define pa(array,n) \
+    {               \
+    for0(i,n)       \
+    {               \
+        cout << "[" << array[i] << "]"; \
+    }               \
+    ENDLINE;        \
+    }               \
+ 
+#define ps(s) printf("%s\n",s);
+
+struct andar
+{
+    double x,y,l;
+} ;
+
+struct ponto
+{
+    double x,y;
+   
+
+   
+    ponto()
+    {
+   
+    }
+   
+    ponto(int x, int y)
+    {
+        this->x = x; this->y = y;
+    }
+};
+
+struct quadrado
+{
+    struct ponto inf, sup;
+   
+    quadrado(const quadrado &q1)
+    {
+        this->inf.x = q1.inf.x;
+        this->inf.y = q1.inf.y;        
+       
+        this->sup.x = q1.sup.x;
+        this->sup.y = q1.sup.y;        
+    }
+   
+    quadrado()
+    {
+   
+    }
+   
+    quadrado(const ponto &C, double L)
+    {
+
+        this->inf.x = C.x - L/2.0;
+        this->inf.y = C.y - L/2.0;
+       
+        this->sup.x = C.x + L/2.0;
+        this->sup.y = C.y + L/2.0;
+       
+    //s    return quadrado(q);
+    }
+};
+
+
+double dist(const ponto &p, const ponto &p2)
+{
+    return sqrt((p.x - p2.x)*(p.x - p2.x) + (p.y - p2.y)*(p.y - p2.y));
+}
+
+double distancia(quadrado q1, quadrado q2)
+{
+    if(q1.inf.x > q2.inf.x) return distancia(q2,q1);
+   
+    if(q2.inf.x < q1.sup.x) 
+    {
+        if(q2.inf.y > q1.sup.y) return q2.inf.y - q1.sup.y;
+        if(q2.sup.y < q1.inf.y) return q1.inf.y - q2.sup.y; 
+           
+         
+
+        return 0; // condição do autor
+    }
+    if(q2.inf.y > q1.sup.y) return dist(q2.inf,q1.sup);
+   
+    if(q2.sup.y < q1.inf.y)
+    {
+        return dist(ponto(q2.inf.x,q2.sup.y),ponto(q1.sup.x,q1.inf.y));
+    }
+
+    return q2.inf.x - q1.sup.x;
+}
+
+
+int main()
+{
+    int N; double AAH;
+    cin >> N >> AAH;
+    //printf("N %d e AAH %lf\n",N,AAH);
+    double x,y,l,xc,yc,lc;
+     bool caiu = false;  
+    for0(i,N)
+    {
+	cin >> x >> y >> l;
+	
+	if(i)
+	{
+		ponto C = ponto();
+
+		C.x = xc; C.y = yc;
+		quadrado q1 = quadrado(C,lc);
+	       
+		ponto C2 =  ponto();
+
+		C2.x = x; C2.y = y;
+		
+		quadrado q2 = quadrado(C2,l);       
+		//printf("%lf %lf %lf\n",xc,yc,lc);
+		//printf("%lf %lf %lf\n",x,y,l);
+		//printf("distancia %lf\n",distancia(q1,q2));
+	       
+		if(distancia(q1,q2) >= AAH)
+		{   
+		
+		    caiu = true; i = N+12; break;  
+		}	
+	}
+		
+	xc  = x; yc = y; lc = l;
+	
+    }   
+    
+   
+    if(!caiu) printf("YEAH\n");
+    else printf("OUCH\n");
+       
+   
+}
+
+
+

@@ -1,0 +1,251 @@
+Production year i = 1 and Distiller year j = 0
+C[j] + MIN[i-1][j-1] = 30 + 0 = 30
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 0 + 0 = 150
+Let's take the minor between first(30) and second(150)
+M[i=1][j=0] = 30
+Production year i = 1 and Distiller year j = 1
+C[j] + MIN[i-1][j-1] = 50 + 0 = 50
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 60 + 0 = 90
+Let's take the minor between first(50) and second(90)
+M[i=1][j=1] = 50
+Production year i = 1 and Distiller year j = 2
+C[j] + MIN[i-1][j-1] = 65 + 0 = 65
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 50 + 0 = 100
+Let's take the minor between first(65) and second(100)
+M[i=1][j=2] = 65
+Production year i = 1 and Distiller year j = 3
+C[j] + MIN[i-1][j-1] = 80 + 0 = 80
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 40 + 0 = 110
+Let's take the minor between first(80) and second(110)
+M[i=1][j=3] = 80
+Production year i = 1 and Distiller year j = 4
+C[j] + MIN[i-1][j-1] = 100 + 0 = 100
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 30 + 0 = 120
+Let's take the minor between first(100) and second(120)
+M[i=1][j=4] = 100
+Production year i = 1 and Distiller year j = 5
+C[j] + MIN[i-1][j-1] = 120 + 0 = 120
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 20 + 0 = 130
+Let's take the minor between first(120) and second(130)
+M[i=1][j=5] = 120
+Production year i = 2 and Distiller year j = 0
+C[j] + MIN[i-1][j-1] = 30 + 0 = 30
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 0 + 50 = 200
+Let's take the minor between first(30) and second(200)
+M[i=2][j=0] = 30
+Production year i = 2 and Distiller year j = 1
+C[j] + MIN[i-1][j-1] = 50 + 30 = 80
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 60 + 50 = 140
+Let's take the minor between first(80) and second(140)
+M[i=2][j=1] = 80
+Production year i = 2 and Distiller year j = 2
+C[j] + MIN[i-1][j-1] = 65 + 50 = 115
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 50 + 50 = 150
+Let's take the minor between first(115) and second(150)
+M[i=2][j=2] = 115
+Production year i = 2 and Distiller year j = 3
+C[j] + MIN[i-1][j-1] = 80 + 65 = 145
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 40 + 50 = 160
+Let's take the minor between first(145) and second(160)
+M[i=2][j=3] = 145
+Production year i = 2 and Distiller year j = 4
+C[j] + MIN[i-1][j-1] = 100 + 80 = 180
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 30 + 50 = 170
+Let's take the minor between first(180) and second(170)
+M[i=2][j=4] = 170
+Production year i = 2 and Distiller year j = 5
+C[j] + MIN[i-1][j-1] = 120 + 100 = 220
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 20 + 50 = 180
+Let's take the minor between first(220) and second(180)
+M[i=2][j=5] = 180
+Production year i = 3 and Distiller year j = 0
+C[j] + MIN[i-1][j-1] = 30 + 0 = 30
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 0 + 80 = 230
+Let's take the minor between first(30) and second(230)
+M[i=3][j=0] = 30
+Production year i = 3 and Distiller year j = 1
+C[j] + MIN[i-1][j-1] = 50 + 80 = 130
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 60 + 80 = 170
+Let's take the minor between first(130) and second(170)
+M[i=3][j=1] = 130
+Production year i = 3 and Distiller year j = 2
+C[j] + MIN[i-1][j-1] = 65 + 80 = 145
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 50 + 80 = 180
+Let's take the minor between first(145) and second(180)
+M[i=3][j=2] = 145
+Production year i = 3 and Distiller year j = 3
+C[j] + MIN[i-1][j-1] = 80 + 115 = 195
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 40 + 80 = 190
+Let's take the minor between first(195) and second(190)
+M[i=3][j=3] = 190
+Production year i = 3 and Distiller year j = 4
+C[j] + MIN[i-1][j-1] = 100 + 140 = 240
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 30 + 80 = 200
+Let's take the minor between first(240) and second(200)
+M[i=3][j=4] = 200
+Production year i = 3 and Distiller year j = 5
+C[j] + MIN[i-1][j-1] = 120 + 150 = 270
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 20 + 80 = 210
+Let's take the minor between first(270) and second(210)
+M[i=3][j=5] = 210
+Production year i = 4 and Distiller year j = 0
+C[j] + MIN[i-1][j-1] = 30 + 0 = 30
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 0 + 130 = 280
+Let's take the minor between first(30) and second(280)
+M[i=4][j=0] = 30
+Production year i = 4 and Distiller year j = 1
+C[j] + MIN[i-1][j-1] = 50 + 110 = 160
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 60 + 130 = 220
+Let's take the minor between first(160) and second(220)
+M[i=4][j=1] = 160
+Production year i = 4 and Distiller year j = 2
+C[j] + MIN[i-1][j-1] = 65 + 130 = 195
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 50 + 130 = 230
+Let's take the minor between first(195) and second(230)
+M[i=4][j=2] = 195
+Production year i = 4 and Distiller year j = 3
+C[j] + MIN[i-1][j-1] = 80 + 145 = 225
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 40 + 130 = 240
+Let's take the minor between first(225) and second(240)
+M[i=4][j=3] = 225
+Production year i = 4 and Distiller year j = 4
+C[j] + MIN[i-1][j-1] = 100 + 170 = 270
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 30 + 130 = 250
+Let's take the minor between first(270) and second(250)
+M[i=4][j=4] = 250
+Production year i = 4 and Distiller year j = 5
+C[j] + MIN[i-1][j-1] = 120 + 180 = 300
+C[1] + P - V[j] + MIN[i-1][1] = 50 + 100 - 20 + 130 = 260
+Let's take the minor between first(300) and second(260)
+M[i=4][j=5] = 260
+[0][0][0][0][0][0][0][0]
+[30][50][65][80][100][110][120][0]
+[80][80][115][140][150][160][170][0]
+[110][130][145][170][180][190][200][0]
+[160][160][195][220][230][240][250][0]
+
+Production year i = 4 and Distiller year j = 0
+C[j] + MIN[i+1][j+1] = 30 + 0 = 30
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 0 + 0 = 150
+Let's take the minor between first(30) and second(150)
+M[i=4][j=0] = 30
+Production year i = 4 and Distiller year j = 1
+C[j] + MIN[i+1][j+1] = 50 + 0 = 50
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 60 + 0 = 90
+Let's take the minor between first(50) and second(90)
+M[i=4][j=1] = 50
+Production year i = 4 and Distiller year j = 2
+C[j] + MIN[i+1][j+1] = 65 + 0 = 65
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 50 + 0 = 100
+Let's take the minor between first(65) and second(100)
+M[i=4][j=2] = 65
+Production year i = 4 and Distiller year j = 3
+C[j] + MIN[i+1][j+1] = 80 + 0 = 80
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 40 + 0 = 110
+Let's take the minor between first(80) and second(110)
+M[i=4][j=3] = 80
+Production year i = 4 and Distiller year j = 4
+C[j] + MIN[i+1][j+1] = 100 + 0 = 100
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 30 + 0 = 120
+Let's take the minor between first(100) and second(120)
+M[i=4][j=4] = 100
+Production year i = 4 and Distiller year j = 5
+C[j] + MIN[i+1][j+1] = 120 + 0 = 120
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 20 + 0 = 130
+Let's take the minor between first(120) and second(130)
+M[i=4][j=5] = 120
+Production year i = 3 and Distiller year j = 0
+C[j] + MIN[i+1][j+1] = 30 + 50 = 80
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 0 + 50 = 200
+Let's take the minor between first(80) and second(200)
+M[i=3][j=0] = 80
+Production year i = 3 and Distiller year j = 1
+C[j] + MIN[i+1][j+1] = 50 + 65 = 115
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 60 + 50 = 140
+Let's take the minor between first(115) and second(140)
+M[i=3][j=1] = 115
+Production year i = 3 and Distiller year j = 2
+C[j] + MIN[i+1][j+1] = 65 + 80 = 145
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 50 + 50 = 150
+Let's take the minor between first(145) and second(150)
+M[i=3][j=2] = 145
+Production year i = 3 and Distiller year j = 3
+C[j] + MIN[i+1][j+1] = 80 + 100 = 180
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 40 + 50 = 160
+Let's take the minor between first(180) and second(160)
+M[i=3][j=3] = 160
+Production year i = 3 and Distiller year j = 4
+C[j] + MIN[i+1][j+1] = 100 + 110 = 210
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 30 + 50 = 170
+Let's take the minor between first(210) and second(170)
+M[i=3][j=4] = 170
+Production year i = 3 and Distiller year j = 5
+C[j] + MIN[i+1][j+1] = 120 + 120 = 240
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 20 + 50 = 180
+Let's take the minor between first(240) and second(180)
+M[i=3][j=5] = 180
+Production year i = 2 and Distiller year j = 0
+C[j] + MIN[i+1][j+1] = 30 + 115 = 145
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 0 + 115 = 265
+Let's take the minor between first(145) and second(265)
+M[i=2][j=0] = 145
+Production year i = 2 and Distiller year j = 1
+C[j] + MIN[i+1][j+1] = 50 + 130 = 180
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 60 + 115 = 205
+Let's take the minor between first(180) and second(205)
+M[i=2][j=1] = 180
+Production year i = 2 and Distiller year j = 2
+C[j] + MIN[i+1][j+1] = 65 + 140 = 205
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 50 + 115 = 215
+Let's take the minor between first(205) and second(215)
+M[i=2][j=2] = 205
+Production year i = 2 and Distiller year j = 3
+C[j] + MIN[i+1][j+1] = 80 + 150 = 230
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 40 + 115 = 225
+Let's take the minor between first(230) and second(225)
+M[i=2][j=3] = 225
+Production year i = 2 and Distiller year j = 4
+C[j] + MIN[i+1][j+1] = 100 + 160 = 260
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 30 + 115 = 235
+Let's take the minor between first(260) and second(235)
+M[i=2][j=4] = 235
+Production year i = 2 and Distiller year j = 5
+C[j] + MIN[i+1][j+1] = 120 + 170 = 290
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 20 + 115 = 245
+Let's take the minor between first(290) and second(245)
+M[i=2][j=5] = 245
+Production year i = 1 and Distiller year j = 0
+C[j] + MIN[i+1][j+1] = 30 + 180 = 210
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 0 + 180 = 330
+Let's take the minor between first(210) and second(330)
+M[i=1][j=0] = 210
+Production year i = 1 and Distiller year j = 1
+C[j] + MIN[i+1][j+1] = 50 + 195 = 245
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 60 + 180 = 270
+Let's take the minor between first(245) and second(270)
+M[i=1][j=1] = 245
+Production year i = 1 and Distiller year j = 2
+C[j] + MIN[i+1][j+1] = 65 + 205 = 270
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 50 + 180 = 280
+Let's take the minor between first(270) and second(280)
+M[i=1][j=2] = 270
+Production year i = 1 and Distiller year j = 3
+C[j] + MIN[i+1][j+1] = 80 + 215 = 295
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 40 + 180 = 290
+Let's take the minor between first(295) and second(290)
+M[i=1][j=3] = 290
+Production year i = 1 and Distiller year j = 4
+C[j] + MIN[i+1][j+1] = 100 + 225 = 325
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 30 + 180 = 300
+Let's take the minor between first(325) and second(300)
+M[i=1][j=4] = 300
+Production year i = 1 and Distiller year j = 5
+C[j] + MIN[i+1][j+1] = 120 + 235 = 355
+C[0] + P - V[j] + MIN[i+1][1] = 50 + 100 - 20 + 180 = 310
+Let's take the minor between first(355) and second(310)
+M[i=1][j=5] = 310
+[0][0][0][0][0][0][0][0]
+[210][245][260][270][280][290][300][0]
+[145][180][195][205][215][225][235][0]
+[80][115][130][140][150][160][170][0]
+[30][50][65][80][100][110][120][0]

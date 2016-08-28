@@ -1,0 +1,94 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+#define end_ '\n';
+
+typedef unsigned long long ll;
+typedef vector<ll> vll;
+
+ll _sieve_size;
+
+vector<bool> bs (1000000000);
+
+vector<ll> primes;
+
+/*
+Então podemos concluir que se o número possui apenas expoente pares para os fatores de sua fatoração prima ele é um quadrado perfeito.
+*/
+
+bool perfect_square(ll n)
+{
+	double r = round(sqrt(n));
+	
+	return r*r == n;
+
+}
+
+void sieve(ll ub)  // ub = upperbound
+{
+	ub = sqrt(ub) + 1;
+	
+	fill(bs.begin(), bs.end() ,true);
+	
+//	bs.set(); // set all bits to 1
+	bs[0] = bs[1] = 0;
+	
+	for(ll i = 2; i <= ub;i++)
+	{
+		if(bs[i])
+		{
+			for(ll j = i*i;j <= ub; j+=i)
+			{
+				bs[j] = 0;
+			}
+			primes.push_back(i);
+		}
+	}
+}
+
+ll prime_factors_perfect_square(ll N)
+{
+	//vll factors;
+	ll answ = 1;
+	ll PF_idx = 0, PF = primes[PF_idx];
+	int count = 0;
+	
+	while(PF*PF <= N)
+	{
+		count = 0;
+		while(N % PF == 0)
+		{
+			N /= PF;
+			answ *= PF;
+			count++;
+		}		
+		if(count % 2 != 0 && count != 0) answ *= PF;
+		
+		PF = primes[++PF_idx];
+	}
+	if(N != 1) answ*=N*N;
+
+	return answ;
+}
+
+
+int main()
+{
+	ll t,n;
+	cin >> t;
+	ll inst=0;
+	
+	sieve(10000000000);
+
+	//printf("12 %d\n",perfect_square(12));
+	
+	for(int i = 0; i < t;i++)
+	{	
+		inst++;
+		cin >> n;
+		n = prime_factors_perfect_square(n);
+		
+		cout << "Caso #" << inst << ": " << n << end_;
+	}
+}
