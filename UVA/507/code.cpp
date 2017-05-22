@@ -37,12 +37,15 @@ bool solve(int n_stops, int route)
     int larger = 1;
     for(int i = 1;i <= n_stops;i++)
     {
-        if(PD[i] > larger)
+        cout << " " << PD[i];
+        if(PD[i] > PD[larger])
         {
+            cout << "\t found larger" << endl;
             larger = i;
         }
     }
-    if( PD[larger] > 0)
+    cout << endl;
+    if( PD[larger] >= 0)
     cout << "The nicest part of route " << route << " is between stops " << first << " and " << larger + 1 << endl;
     else 
     cout << "Route " << route << " has no nice parts" << endl;
@@ -58,15 +61,19 @@ int main()
     for(int i = 0;i < number_routes;i++)
     {
         memset(PD,0,sizeof(int)*(number_routes+1));
-
+        cout << "printing input:: "; 
         int n_stops;
         cin >> n_stops;
         n_stops--;
+
+        cout << " n  = " << n_stops << endl;
+        
         for(int j = 1;j <= n_stops;j++)
         {
             cin >> stops[j];
+            cout << " " << stops[j]; 
         }
-
+        cout << " ********** " << endl;
         solve(n_stops,i+1);    
     }
 
