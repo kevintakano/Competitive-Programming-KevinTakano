@@ -1,2 +1,0 @@
-rm s1 s2
-for((i=1;i<=53;i++)); do ./a.out < E_$i.in >> s1 && cat E_$i.sol >> s2 ; done
